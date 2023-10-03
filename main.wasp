@@ -1,0 +1,73 @@
+app askAi {
+  wasp: {
+    version: "^0.11.5"
+  },
+  title: "ask-ai",
+  db: { 
+    system: PostgreSQL,
+    seeds: [
+      import { embedSeedScript } from "@server/generateEmbeddings.js",
+    ]
+  },
+  dependencies: [
+    ("openai", "3.2.1"),
+    ("gpt-3-encoder", "^1.1.4"),
+    ("mammoth", "1.5.1"),
+    ("pdf-parse", "1.1.1"),
+    ("@types/pdf-parse", "1.1.1"),
+    ("@pinecone-database/pinecone", "0.1.6"),
+    ("commander", "^11.0.0")
+  ],
+}
+
+entity TextChunk {=psl
+  id              Int         @id @default(autoincrement())
+  title           String
+  content         String
+  tokenAmount     Int
+  parentFile      ParentFile? @relation(fields: [parentFileTitle], references: [title])
+  parentFileTitle String?
+psl=}
+
+entity ParentFile {=psl
+  id              Int         @id @default(autoincrement())
+  title           String      @unique
+  textChunks      TextChunk[]
+  isComplete      Boolean     @default(false)
+  dateEmbedded    DateTime    @default(now())
+psl=}
+
+route RootRoute { path: "/", to: MainPage }
+page MainPage {
+  component: import Main from "@client/MainPage"
+}
+
+action generateEmbeddings {
+  fn: import { generateEmbeddings } from "@server/generateEmbeddings.js",
+  entities: [TextChunk, ParentFile]
+}
+
+query getEmbeddedFilenames {
+  fn: import { getEmbeddedFilenames } from "@server/getEmbeddedFiles.js",
+  entities: [ParentFile]
+}
+
+query searchEmbeddings {
+  fn: import { searchEmbeddings } from "@server/searchEmbeddings.js",
+  entities: [TextChunk]
+}
+
+query getEmbeddedTextChunk {
+  fn: import { getEmbeddedTextChunk } from "@server/getEmbeddedFiles.js",
+  entities: [TextChunk, ParentFile]
+}
+
+job mySpecialJob {
+  executor: PgBoss,
+  perform: {
+    fn: import { pingPinecone } from "@server/recurringJob.js",
+  },
+  schedule: {
+    cron: "0 */12 * * *",
+  },
+}

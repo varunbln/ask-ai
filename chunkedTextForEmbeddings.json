@@ -1,0 +1,458 @@
+[
+  [
+    {
+      "title": "UNIT-2 SNA-Network Visualization.pdf-0",
+      "content": "Network Visualization  •Information visualization deals with presentation of data in visual  format. •Goal is to take advantage of human's natural abilities to see patters,  anomalies, relationships, features in visual data. •Visualization can help in the process of extracting insight from data  during decision making. •Its advantages are based on the ability to rapidly interpret large  quantities of data.   Examples  Examples  Examples  •Node Edge diagrams: •A node-edge diagram is an intuitive way to visualize social networks.  With the node edge visualization, many network analysis tasks, such  as component size calculation, centrality analysis, and pattern  sketching, can be better presented. •Social Graphs are basically a network of nodes and edges of entities  and the connections between them.   Graph Visualization Techniques  for Networks ➢Graph Layout ✓Most graphs are powered by a two-dimensional data system  consisting of two core items: nodes and edges. ✓How edges and nodes in a graph are laid is critical to understand the  content. ✓Researchers have presented some general guidelines that make  network visualizations easier to work with: 1. Every node is visible.  2. For every node you can count its degree.  3. For every link you can follow it from source to destination. 4.",
+      "content_length": 1303,
+      "content_tokens": 270
+    },
+    {
+      "title": "UNIT-2 SNA-Network Visualization.pdf-1",
+      "content": "Clusters and outliers are identifiable  •Network Layout Algorithms: •Starts with the nodes randomly placed and iteratively move them around  into better positions. •As a result, running the algorithm multiple times will produce graphs that  look different.  ➢Random layout ✓When loading data into a visualization tool, the nodes are placed randomly.  ✓It often does not provide much insight into the structure of the network.  ✓It simply places the nodes at randomly computed positions inside a user- defined region. ✓It can efficiently draw the social network graph in linear time O(N) ✓Nevertheless, the Random Layout algorithm can be useful when a random,  initial placement is needed by another layout algorithm or in cases where an  aesthetic, readable drawing is not important.  ✓This algorithm is not recommended for automata with many high-degree vertices and for those with  many vertices, as there is more potential for edge-intersection and vertex overlap respectively.  ➢Circular layout ✓Circular layouts place all the nodes in a circle and then add edges between  them. ✓Some circular layouts place nodes closer to one another when they are more  closely connected.",
+      "content_length": 1178,
+      "content_tokens": 245
+    },
+    {
+      "title": "UNIT-2 SNA-Network Visualization.pdf-2",
+      "content": "Acirculardrawingofagraphisavisualizationofagraphwiththefollowingcharacteristics: 1)Thegraphispartitionedintoclusters, 2)Thenodesofeachclusterareplacedontothecircumferenceofanembeddingcircle, 3)Eachedgeisdrawnasastraightline, 4)Anodecannotbeoccludedbyanothernodeorbyanedge. •The circular layout is mainly used for small-medium sized graphs data analysis and in the applications  where that application requires the visualization of information having more emphasis on the  aesthetics of drawing.  •Grid layout  ➢Force-directed layout •Thelayoutisdynamicanddeterminedbytheconnectionsbetweenthenodes. •Aforce-directedlayoutisalsoknownasaspringlayout,whichsimulatesthegraphasavirtual physicalsystem.Inaforce-directedlayout,theedgesactasspringandthenodesactasrepelling objects. •Thosenodesthataremorecloselyconnectedarelaidoutclosetooneanother,andthosethatare distantareshownfurtherapart. •Arrangesgraphsinanorganicandaestheticallypleasingway.",
+      "content_length": 938,
+      "content_tokens": 252
+    },
+    {
+      "title": "UNIT-2 SNA-Network Visualization.pdf-3",
+      "content": "•Theirpurposeistopositionthenodesofagraphintwo-dimensionalorthree-dimensionalspaceso thatalltheedgesareofmoreorlessequallengthandthereareasfewcrossingedgesaspossible, byassigningforcesamongthesetofedgesandthesetofnodes,basedontheirrelativepositions, andthenusingtheseforceseithertosimulatethemotionoftheedgesandnodesortominimize theirenergy. •Theideaistomodelthegraphasasystemofparticlesthatrepelorattracteachotherbasedon somecriteria,suchasthedistance,thedegree,orthegroupofthenodes.  •Aninitialrandomlayoutwillbeyieldedfirst,andthentheforce-directedalgorithmswillrun iterativelytoadjustthepositionsofnodesuntilallgraphnodesandattractiveforcesbetweenthe adjacentnodesruntoconvergence. •Force-DirectedLayoutalgorithmsaregraphdrawingalgorithmsbasedonlyoninformation containedwithinthestructureofthegraphitselfratherthanrelyingoncontextualinformation. •ThemoststraightforwardForce-Directedalgorithmusesrepulsiveforcesbetweennodesand attractiveforcesbetweenadjacentnodes. •Themainalgorithmconsistsofamainloopthatsimulatesthesystemforsomeiterationsand thenplotsthegraph.",
+      "content_length": 1066,
+      "content_tokens": 300
+    },
+    {
+      "title": "UNIT-2 SNA-Network Visualization.pdf-4",
+      "content": "•Thesimulationrunsuntilthesystemreachesastateofequilibrium,wheretheforcesare balancedandthegraphisstable.Theresultisalayoutthatreflectsthestructureandthe dynamicsofthedata. •Repulsiveforcespushthenodesawayfromeachother,preventingthemfromoverlappingor clusteringtoomuch. •Attractiveforcespullthenodestogether,basedontheexistenceandtheweightoftheedges betweenthem. •Thebalancebetweenthesetwoforcesdeterminesthefinalshapeandappearanceofthegraph.  •The running cost of a force-directed layout is much higher than that of a random layout, especially  when the number of nodes is large It is therefore not suitable for graphs larger than hundreds of  nodes.  ➢Yifan Hu layout •Belongs to the category of force-directed algorithms,  •It optimizes the overall internode repulsions in the network. ➢Harel-Korenfast multiscale layout  •Is designed to quickly lay out large, complex graphs.  •It is based on force-directed layout algorithms but uses optimizations in the  underlying code to make the algorithm computationally efficient. •For large graphs with thousands of nodes, generating a layout with many  force-directed algorithms can take a very long time.",
+      "content_length": 1152,
+      "content_tokens": 282
+    },
+    {
+      "title": "UNIT-2 SNA-Network Visualization.pdf-5",
+      "content": "•With Harel-Koren, it often can be achieved in a few seconds, making it an  ideal choice for large networks.  Visualizing network features •Along with nodes and edges, the other network features, like edge  weights, node properties, labels, and clusters, can also be visualized.  •Labels: ✓Labels are the attributes to show in a network, both on nodes and on edges. ✓Challenges can be minimized using the following: •Putting boxes around the text,  •Showing a few labels of interest, •On interactive interfaces that only show labels on demand.  ✓Still, there are no solutions to eliminate this problem when producing fixed  visualization images, so often labels are left off.   •Size, shape, and color: •Categorical or quantitative attributes are easy to show by  adjustments in size, shape, or color. •  Graph with two  attributes  •Edges can also be treated with color or thickness to indicate their attributes. •For example, different types of relationships could each be coded in a different color.  •Edgeweightsarealsocommonlyvisualized.Thesecouldindicatethestrengthofarelationship, thefrequencyofcommunication,orotherfactors.",
+      "content_length": 1131,
+      "content_tokens": 264
+    },
+    {
+      "title": "UNIT-2 SNA-Network Visualization.pdf-6",
+      "content": "•Larger graph properties     Scale issues •Visualization is very useful for analyzing smaller networks (few  hundred to few thousand nodes) •When networks become much larger, the quality of the visualization  diminishes.  •Density •Density is also be a problem for visualization, even if the number of  nodes is small.  •Filtering for visual patterns •It is often difficult to see any patterns in very dense networks.  •One way to compensate for this is to filter the networks when possible.  •Graph simplification •Graph simplification techniques include grouping clusters of nodes  into a single node and representing the edges between clusters as a  single edge •Rrepresentingstructural patterns as representative shapes, or  showing only part of the graph at a time.",
+      "content_length": 770,
+      "content_tokens": 162
+    }
+  ],
+  [
+    {
+      "title": "UNIT-4-Tie Strength.pdf-0",
+      "content": "UNIT-4:  SAN-Tie Strength  Introduction •Any kind of relationship type can be used in SNA. •The tie strength is the measure of strength  of  a relationship  between people.  •The strength of tie is a combination of the amount of time, the emotional intensity, the  intimacy, and the reciprocal services which characterize the tie.     [Mark Granovetter] •Strong tie  [ family members, very close friends] •Weak Tie  [ more casual friendship] •People with whom no meaningful relationship, or vendor that businessman may contact are not  considered  as weak or strong ties. They are called Absent ties. •Absent tie would not appear as edge in the network •Tie  strength is more important factor to consider in SNA • Flow of information in weak tie and strong tie are different.  The role of tie strength Granovetterfound that 56% of the people he talked to found their jobs through personal contacts  (Granovetter, 1974, p. 14)  The role of tie strength •Intheexamples,Everycasehasatleastoneweakrelationshiplinkanoldfriend,a neighborofthefamily,orsomeonemetataparty. •Theserelationships,knownasweakties,turnouttobeincrediblyimportantforfindinga jobandforthespreadofanythingthroughsocialconnections.",
+      "content_length": 1196,
+      "content_tokens": 293
+    },
+    {
+      "title": "UNIT-4-Tie Strength.pdf-1",
+      "content": "•Thisisbecauseaperson’sweaktiesarelikelytotravelindifferentsocialcircles,while strongtiesarelikelytoknowoneanotherandtravelinthesamesocialcircles. •Thesocialconnectionsofweaktiesaremorediverseandprovideaccesstoamuch broaderrangeofinformationandpeoplethanstrongties. •ThiswasemphasizedinareplicationofMilgram’s“sixdegrees”experiment[relatedto distributionofbooks] •Weaktiesareimportantinwaysbeyondthespreadofinformation. •Theyalsoplayanimportantroleinhoworganizationsandgroupsfunction.  •Inonestudy,researchersfoundthatonewaytoimproveracialintegrationin classroomswastoarrangeclassstructurestoformmanyweaktiesbetweenblack andwhitestudents,ratherthanfocusingonbuildingfewer,strongerrelationships betweenstudentsofdifferentraces(Karweit,1979)",
+      "content_length": 739,
+      "content_tokens": 212
+    },
+    {
+      "title": "UNIT-4-Tie Strength.pdf-2",
+      "content": "•Anotherstudylookedatjobsatisfactioninachildren’spsychiatrichospital.While manyhospitalsofthistypehavehighturnoverratesandlowjobsatisfaction,this particularhospitalwasquitedifferent.Moralewasquitehigh,andtheresearcher attributedthistothemanyweaktiesamongthehospitalstaff.Insteadofbeing organizedintotight-knit,insulargroups,thestaffallfrequentlyinteractedwithone anotherandeveryonekneweachotheronafirst-namebasis.Thismadeiteasier forindividualstointeractwithoneanotherandtointegrateintonewgroups(Blau, 1995)  •Thisdoesnotmeanthatstrongtiesareunimportant. •Strongtiesfamilyandclosefriendshiprelationshipsaremorecommitted,reliable, andtrustworthy. •Theyalsoformacriticalpartofsocialstructure. •Eveninajobsearch,whereGranovetteroriginallyshowedtheimportanceof weakties,strongtiesplayanimportantrole.Afollow-upstudyofnearly1,800 peopleshowedthatover56%ofthemusedtiestofindtheirjob,butamongthose, 72%usedstrongties.  •Strongtiesaremorewillingtohelpandhavegreatermotivationtodo so.Thisistrueinfindingjobs,butinmanyothercontextsaswell.",
+      "content_length": 1028,
+      "content_tokens": 293
+    },
+    {
+      "title": "UNIT-4-Tie Strength.pdf-3",
+      "content": "•Twosimultaneousstudiesofsocialstructurefoundthatpeoplerely heavilyonstrongties. •Peoplewithstrongtiesprovideoneanotherwithaccesstofood stamps,housing,childcare,money,socialsupport,andotheritemsof value.Thecloserelationshipsofbothfamilyandfamily-likefriends arevitaltothissocialstructure.  •Bothtypesoftieshavetheirbenefits. •Becausepeoplelinkedbystrongtiesseeoneanotherfrequentlyandinteractona deeplevel,theyaremotivatedtohelponeanother,puteffortintothe relationship,andbehaveinatrustworthyway. •Weakties,ontheotherhand,donothavethesemotivations,buttheydoprovide accesstoamorediversesetofinformationandresources. •Theyarealsoeasierconnectionstoformandmaintain.Thismeanstheyprovide aneasyandimportantlinktotheworldoutsideaperson’scoresocialcircle.  Measuring tie strength •Toanalyzetiestrengthinsocialnetworkanalysis,thenetworkmustinclude relationshipinformation. •Insmallnetworks,especiallyifdataishand-collected,itmaybefeasibleto askeachpersontoratethestrengthoftheirtietoeachperson.",
+      "content_length": 985,
+      "content_tokens": 278
+    },
+    {
+      "title": "UNIT-4-Tie Strength.pdf-4",
+      "content": "•Largernetworksrequireamechanismformeasuringtiestrength.Thereis nosinglefactorthatdefinesastrongorweaktie,butanumberofpredictors canbecombinedtoestimatethestrengthofarelationship. •“TheStrengthofWeakTies,”Granovetteroffersfourintuitivefactorsthat maycontributetotiestrength. •“Thestrengthofatieisacombinationoftheamountoftime,theemotionalintensity, theintimacy(mutualconfiding),andthereciprocalserviceswhichcharacterizethe tie.”  4 intuitive factors contributing to tie strength •Time:Includestheamountoftimepeoplespendwitheachother,thedurationof theirrelationship(i.e.,howlongtheyhaveknowneachother),andhowfrequently theyseeoneanother. •Emotionalintensity:Isindicatedbytheclosenessofarelationship;closefriends orfamilymembersarelikelytobestrongties,whilemorecasualfriendsform weakerties. •Intimacy,ormutualconfiding:Relatestopeoplesharingsecretsorintimate personaldetailswithoneanother.Themoreofthisinformationtheyexchange,the closertheirrelationshipislikelytobe.",
+      "content_length": 964,
+      "content_tokens": 291
+    },
+    {
+      "title": "UNIT-4-Tie Strength.pdf-5",
+      "content": "•ReciprocalServices:Arefavorsthatpeopledoforoneanother.Theymaybe personal(e.g.,petsittingorpickingupsomeone’sdrycleaning),financial(e.g., loaningmoney),professional(e.g.,puttingpeopleincontactwithoneanother)etc.  •Thereareseveralotherfactors,butthreearemorewidelyacceptedas important. •Structuralfeaturesrelatetothesocialnetworkofthetwopeoplein question.Thosewhohavemanymutualfriendsarelikelytohavestronger ties •SocialDistancemeasureshowdifferentpeople’ssocialsituationsare.This includesfactorslikeagedifference,race,education,andsocioeconomic status.Peoplewithstrongtiestendtohavesimilarsocialattributes. •EmotionalSupportdescribesthecommunicationbetweenpeoplethat validatestheiremotions,showsunderstandingoftheirproblems,andtriesto alleviatestress.  •Allsevenfactorsarenotequallyimportantindeterminingtiestrength •Forexample,studieshaveconsistentlyshownthatmeasuresofarelationship’s closeness,oftencapturedthroughemotionalintensityorintimacy,areamong thestrongestindicatorsofstrength(Marsden,1984) •Factorsarenotindependent.",
+      "content_length": 1027,
+      "content_tokens": 295
+    },
+    {
+      "title": "UNIT-4-Tie Strength.pdf-6",
+      "content": "•Forexample,peoplewhohaveaveryintimaterelationshipwilloftenspenda lotoftimetogether.Peopleofdifferentagesandpositionsinlife,orthosewho havealargesocialdistancearealsolesslikelytohaveasmanymutualfriends aspeoplewithsimilarsocialpositions.Thus,whenmeasuringbehavioror interactions,asinglemeasurementmaydescribemorethanoneofthese factors.  •It does not always follow that having many of these factors indicates a  strong tie.  •For example, roommates may have many friends in common, be in socially  similar situations (and therefore have a low social distance), spend a lot of  time together, and even do favors for one another, yet still maintain a distant  and impersonal relationship. •A natural question to follow is how these factors are measured. •Intimacy, for example, is difficult to quantify, and depending on the context of  a relationship, its meaning may vary. Indeed, there is no single correct answer  for how to measure any of these relationship features. If measuring them is  important, it will depend on the context, the information available, and likely  many other factors.",
+      "content_length": 1092,
+      "content_tokens": 253
+    },
+    {
+      "title": "UNIT-4-Tie Strength.pdf-7",
+      "content": "Example for tie strength measurement by Gilbert and  Karahalios(2009) •Subjectsansweredaseriesofquestionsabouttheirrelationshipwith friendsonFacebook,andinformationwascollectedfrombothusers’ profilesandtheirinteractions.ThisFacebookdatawasusedtocreatea setofattributesdesignedtoreflecteachofthesevenaspectsoftie strengthmentionedearlier. •Fewexamplesoftheover70variablestheyusedtomeasuretie strengthareasfollows    Tie strength and network structure •Networkstructureisrelatedtotiestrength. •Peoplewhohavemanyfriendsincommonarelikelytohavestronger tiesthanpeoplewithfewmutualfriends. •Therearemanywaysthattiestrengthandnetworkstructureare related. •Strongtieshaveuniquepropertieswithinasocialnetwork.Theyare notrandomlyscatteredthroughoutthenetwork,butrathertendto appearinclusters. •Strongtieshavetendencytoappearinclusters.Eachpersonwillhave manymoreweaktiesconnectingthemtopeopleoutsidethissmall group,butaperson’sstrongtiestendtohavestrongtiestoone another.  •Thispatternofstrongtiesbeingdenselyconnectedleadstoanotherstructural conceptcalledtheforbiddentriad.",
+      "content_length": 1064,
+      "content_tokens": 293
+    },
+    {
+      "title": "UNIT-4-Tie Strength.pdf-8",
+      "content": "•Imaginethreepeople:Alice,Bob,andChuck.AliceandBobhaveastrongtie,and AliceandChuckalsohaveastrongtie.Whatdoesthattellusaboutthe relationshipwithBobandChuck? •Granovetternamedthistriad“forbidden”becauseoftheunlikelihoodthatno connectionbetweenBobandChuckexists    •Granovetterdescribedthisinhisworkwiththeprinciplethatnostrongtieisa bridge; •whilestrongtiesmaybebridges,itisunlikelygivenwhatweknowaboutthe distributionofedges.Itisalsounlikelythat,overtime,astrongtiewouldremaina bridge.Weaktieswouldbelikelytoformandconnectnodestoremovethestrong tie’sbridgestatus.  Tie strength and network propagation •Networkpropagationisaphenomenonwherethingsspreadthrougha network. •Forsomethingtospreadfromonepersontoanotherinanetwork,there needstobeapathbetweenthem.Thiscanbeadirectedge,eitherastrong orweaktie,oraseriesofedgesbetweenmutualcontacts.Itwillpassfrom onepersontosomeofhisorherneighbors,andfromthemontotheir neighbors.",
+      "content_length": 919,
+      "content_tokens": 283
+    },
+    {
+      "title": "UNIT-4-Tie Strength.pdf-9",
+      "content": "•.Granovetterproposesthatasthestrengthofatiebecomesstronger,the overlapinsocialcircleswilltendtoincrease.Thismeansthatifwefollow alledgesfromourstrongties,wewillreencountermanyofourownfriends. Thatinturnimpliesthatifwepassinformationtoourstrongtiesandifthey passittotheirstrongties,itwillnotgoveryfar;instead,itislikelytoreach peoplewhohavealreadyreceivedthemessage.  •Ifwepassthatsameinformationtoourweakties,ithasachancetogofartherin thenetwork.Sincethereisusuallysmalleroverlapinfriendsbetweenapersonand theirweakties,theweaklyconnectedpeoplehaveachancetospreadthe informationtonewpeoplewhomthesourcedidnotknow •Weaktiesareconnectedtodiversesocialgroupsthatthepersonwouldnot otherwisecommunicatewith,theweaktiesaremoreoftensourcesofnew information,likejobopportunities •Weaktiesarepowerfulinhelpingspreadinformationfartherthroughanetwork, butthisisnottosaythatstrongtiesareunimportant. •Strongtiestendtobemoretrustworthy,reliable,andpersonal.",
+      "content_length": 945,
+      "content_tokens": 279
+    },
+    {
+      "title": "UNIT-4-Tie Strength.pdf-10",
+      "content": "•Aweaktiemaybeabletotellapersonaboutmanyjobopportunities,butastrong tiewillhaveabetterideaofwhatjobswouldbeagoodfit.  BUILDING NETWORKS •Modeling Networks: Defining Nodes: Which node to include? What constitute an edge? Node types: People Networks with Single type of entity  Networks with heterogeneous types of entity  •Bipartite Graphs  •Bimodal Network •Multi-modal Network •Affiliation Network :Networks connect people to organizations •Networks may have multiple types of edges.  •Ex: friendships and family relationships could be included. Networks  with multiple edge types are called multiplex networks •Homogeneous networks : with one type of node and one type of  edge.  •Node Selection: •Not every node should necessarily be included. Defining what qualifies a  node to be included in a network is an important step in network creation.  •Defining Edges: •Edges represent relationships in networks, but relationships vary in strength  and type, and they often change over time. Which ones should be included?",
+      "content_length": 1020,
+      "content_tokens": 240
+    }
+  ],
+  [
+    {
+      "title": "UNIT-5-link prediction.pdf-0",
+      "content": "UNIT-4 ENTITY RESOLUTION AND LINK PREDICTION  Link Prediction •link prediction is the problem of predicting the existence of a link between  two entities in a network. •Involves analysing the network at a set time and predict the edges that may  appear in future.      Mathematical notation •A set is a collection of items. •In graphs, the neighbors of a node are a set. •For example, the neighbors of node A in Figure are {B, C, D} •Let Neighbors(A)indicate the set of A’s neighbors. •If a set is written with vertical bars on either side, that refers to the size of  the set.  •|Neighbors(A)| means the size of the set of A’s neighbors. Since A has  three neighbors, |Neighbors(A)|= 3.  •|Neighbors(A)|= degree(A) •Intersection •Union  •To sum the degree of each node who is neighbors with A •xЄNeighbors(A) That means x represents each item from the set.  Computing score •One of the simplest ways to score the similarity or closeness of two  nodes is to use the shortest path length between them.  •Nodes that are close to one another are more likely to create a  relationship.",
+      "content_length": 1081,
+      "content_tokens": 288
+    },
+    {
+      "title": "UNIT-5-link prediction.pdf-1",
+      "content": "•However, as the average shortest path length increases, we want the  score to decrease because nodes that are far apart (with a high  average shortest path length) are less likely to be connected.  •We can use the negative value of the shortest path, so closer nodes  have higher scores. Score(A,B) = shortestPath(A,B)  Many nodes are tied with a high score of 2.  If a simple rule is used to predict that edges will occur between nodes with the highest scores, then all  these pairs (A,F), (A,G), (B,C), (B,D), (C,H), and (D,H) would have predicted edges between them.   •Another way of computing scores that uses more information from the network structure is to  count the number of common neighbors between the two nodes in a pair.  •For the pair (A,B), we can represent this as the intersection of the set of nodes that are neighbors of  A and the set of nodes that are neighbors of B. Two pairs, (A,G) and (C,D), have the high score. Thus, these would be the only edges predicted when we apply this  algorithm  •The Jaccard Index counts the total number of friends in common and divides that  by the total number of people who are friends of either node.",
+      "content_length": 1161,
+      "content_tokens": 289
+    },
+    {
+      "title": "UNIT-5-link prediction.pdf-2",
+      "content": "•Nodes A and G have two friends in common.  •The total number of nodes who are friends with either A or G is four: nodes B, C,  D, and H. •Note that we do simply add the number of nodes who are friends with A (3) to  the number of nodes who are friends with G (3), because this would count their  mutual friends twice (nodes C and D) Instead, we are taking the union of their  friends  •Nodes C and D have two common neighbors (A and G) Since these are the only neighbors of C  and D, their score is 2/2 = 1.  •Thus, in this network, we would predict that the next edge appears between nodes C and D.  Case Study 1: •Considerfournodes:Alice,Bob,Chuck,andDave.LetAliceandBobbe celebrities,eachwith1millionfriends.ChuckandDaveareaverageuserswith 100friendseach.NowsayAliceandBobhave2,000friendsincommonwhile ChuckandDavehaveonly20friendsincommon. •Thesizeoftheunionisthesumofthedegreesminusthesizeoftheintersection.",
+      "content_length": 913,
+      "content_tokens": 251
+    },
+    {
+      "title": "UNIT-5-link prediction.pdf-3",
+      "content": "•Thisexamplebringsupanotherproblem.Whatifthe20peopleChuckandDaveknowincommonarealsocelebrities? •AdamicandAdar(2003)proposedamethodfordealingwiththisissue.Theylookatcommonfriendsandassignascore thatgivesmoreweighttopeoplewhohaveafewfriends.  The clear winner here is (A,G) This method predicts that the next link to be added is  between these nodes  •Preferential attachment: •This network principle states that nodes with a high degree are more  likely to gain new links.  •Popular nodes are more likely to gain new friends than less popular  nodes.  •When predicting edges, preferential attachments suggest that nodes  with high degree are more likely to gain new edges.   With this measure, we would predict that the next edge to appear will be between nodes A and G.  Advanced link prediction techniques •There are many ways to make the link prediction more sophisticated. •One could begin by combining the measures discussed earlier.  •For example,  take the average ranking of each node pair from each  measure and rank by that value. The result would be a ranking that  considers all the factors described earlier.  •There are also probabilistic models for link prediction that are very  successful. These often rely on a technique called Markov Networks",
+      "content_length": 1261,
+      "content_tokens": 286
+    },
+    {
+      "title": "UNIT-5-link prediction.pdf-4",
+      "content": "Some  approaches consider nodes’ attributes in addition to network structure.  They can also work with weighted and directed graphs. •Machine learning has also been effective when applied to this problem  Entity resolution •Entity Resolution is a technique to identify data records in a single data source or  across multiple data sources that refer to the same real-world entity and to link the  records together. •Entity resolution is a technique that tries to identify nodes that represent the same  entity and then to merge them together. •Most of them involve looking at the data about the nodes, including their  attributes and relationships.  •A corporate service provider can use entity resolution to resolve organization names despite the  different representations, misspellings, abbreviations, and typographical errors. •An insurance company needs to reconcile spelling variations, short forms, synonyms, and  different word orders to correlate its data. •Finance and banking firms require to match different numbers and percentage representations.    Scoring Techniques: •To create score for pair of nodes, we can consider similarity on set of attributes. •Assign score=1 for attributes with match. •Matching on some attributes is more important than others. So, assign more weight to such  attributes. Ex:SSN of a person. •To create a score for pair of nodes, determine that they match on given attribute and have weight  for each attribute.",
+      "content_length": 1454,
+      "content_tokens": 286
+    },
+    {
+      "title": "UNIT-5-link prediction.pdf-5",
+      "content": "•Add positive weight for each attribute where the nodes match, and subtract the weight where  nodes do not match.  How to find weight? •Theweightsmustbehigherforattributesthataremoredefinitive,liketheSSN, andlowerforattributesthataremorecommonlyshared,likethemonthofbirth. •Thisisdonewithvaluescalleduandmprobabilities. •Theuprobabilityindicatestheprobabilitythattwonodeswillmatchonan attributebychance. •Forexample,theprobabilitythattwonodeshavethesamebirthmonthis1/12.Thustheu probabilityforbirthmonthequals1/12or0.083. •Theprobabilityoftwonodeshavingthesamelastnameismorecomplextocomputebecause theprobabilityvariesbasedonthelastnameitself. •Forexample,“Smith”isthemostcommonlastnameintheUnitedStates,representingabout1%ofallcitizens’ lastnames.Thus,theuprobabilityformatchingonthelastname“Smith”is0.01.  •The mprobability is the probability that two nodes that represent the  same person will have the same value. •Often we expect this value will be 1.",
+      "content_length": 956,
+      "content_tokens": 283
+    },
+    {
+      "title": "UNIT-5-link prediction.pdf-6",
+      "content": "•For example, two nodes that are the same should have the same birthday,  gender, SSN, and so on.  •However, the m value is not always 1. In some cases, like address or  phone number, two nodes may indeed represent the same person  but have different values. •For example, one node could have personal/home information, and  the other could have work information. Also, there may be missing  attribute data.  •For example, in Table, several nodes are missing SSNs. Thus, they could  represent the same person, but if one has an SSN and the other does not, the  values will not match.  •Setting the mprobabilities will depend on the data in hand. •In  data given in table m probability for SSN is 0.95 (assuming there is  more data than what is shown in), the m probability for address is  0.6, and the m probability for birth month is 0.98. •There will actually be two weights for each attribute.  •The first is how much weight we add to the score if there is a match,  and the second is how much weight we subtract from the score if  there is no match.  The common formulas are as follows:  •Perform this calculation for every attribute in the table.",
+      "content_length": 1151,
+      "content_tokens": 279
+    },
+    {
+      "title": "UNIT-5-link prediction.pdf-7",
+      "content": "•Then, check for matches and add the appropriate weights for a match  or nonmatch to compute a final score.  Incorporating network data •To quantify how similar these nodes are to one another structurally, examine their egocentric networks  and compare them.  •Specifically, we want to compare the neighbors of one node to the neighbors of the other. •Thus, we can use many of the same scoring mechanisms from link prediction to quantify how similar a  pair of nodes are to one another.  •For entity resolution, the number of common neighbors, the Jaccard Index, the Adamic/Adar method,  and preferential attachment all compared the neighbors of one node with those of another. •The results from these similarity measures can be used in addition to attribute data. •For example, if two nodes are very similar in their attribute data but have very little similarity in the  network, we can reduce the similarity score.  •A high similarity on the network may make up for lower similarity in attribute data as well. Network  and attribute data can be considered as separate steps, or the network data score can receive its own  weight for use in the sum above.   More sophisticated entity resolution  •There are some ways to iterate on the relatively simple methods introduced earlier. •One approach is to allow for partial matches.",
+      "content_length": 1329,
+      "content_tokens": 276
+    },
+    {
+      "title": "UNIT-5-link prediction.pdf-8",
+      "content": "•Ex: “John Smith” and “J Smith” example, while their first names are not an exact match, they are close. Since  “J” is the correct first initial for “John,” we may label this a partial match. Then, instead of adding the weights  for items that match, we can add part of the weight for a partial match. For example, if we say “J” is a 0.3  match for “John,” then we could add 0.3 times the weight for a name match to the score. We would also  have the option of subtracting 0.7 times the non-match score.  •Consider the weight for a matching first name is 5.5 and the weight for a non-matching first name is 3.2. •If we did not give any credit for a partial match, then we would simply subtract 3.2 from the score. But if  there is a 0.3 match on the first name, then the score becomes  This partial match allows  to give much more credit to the pair, subtracting  only 0.59 instead of 3.2.   •Nodes A and J have three common neighbors: nodes E, F, and G.  •Nodes B and D have no common neighbors. Nodes E and I have one node,  J, as a common neighbor.",
+      "content_length": 1051,
+      "content_tokens": 299
+    },
+    {
+      "title": "UNIT-5-link prediction.pdf-9",
+      "content": "And so on. •A graph in which consider whether or not to merge nodes. The examples  will consider merging A and J, B and D, and E and I.  More sophisticated entity resolution   •A second,more sophisticated step is that we can do repeated iterations of entity resolution.   •A second,more sophisticated step is that we can do repeated iterations of entity resolution.       Link prediction: Case study—Friend  recommendation •Many social networking and social media websites have a feature that  recommendsfriends.  •For example, above figure shows Twitter’s “Who to follow” recommendation. •There are many techniques, and link prediction is one way to do it.  •Considers all unconnected pairs of nodes in the network and generates a score for  each.  •Those scores can be used to add the top-scoring link to the graph, or they can be  considered a ranked list of potential edges to add.  •For friend recommendation, consider all edges all possible edges for a specific  user. •When that user logs in, the system can compute a score for each pair comprising  the user and every other node in the network. Then, the pairs can be sorted from  highest to lowest score, and the other node in the top-scoring edges becomes a  recommended friend.",
+      "content_length": 1238,
+      "content_tokens": 279
+    },
+    {
+      "title": "UNIT-5-link prediction.pdf-10",
+      "content": "•For large networks, computing scores for every pair of nodes can be computationally expensive and  take s a long time.  •For example, Facebook has over a billion users. Running 1 billion calculations takes a long time,  especially if the system needs to get the friend list for every person.  •If the system uses this as a limit on number of common neighbors, then the only nodes that need to be  considered as candidate friends for the user are the users’ friends’ friends. That greatly cuts back on the  number of possible pairs to score, making the computation much faster.  •Note that link prediction results are not necessarily the only thing to consider  when recommending friends.  •Looking at similarity of node attributes can add valuable information.  •While the interesting attributes will be different from those in entity resolution, the  techniques for using them may be similar.  •For example, when recommending friends, we might look for people with matches  on interests, educational background, favorite sports teams, and so on. We can  create weights for matches on each of those attributes and use them in a score, just  as we used weights on matching personal information to conduct entity resolution.",
+      "content_length": 1223,
+      "content_tokens": 246
+    },
+    {
+      "title": "UNIT-5-link prediction.pdf-11",
+      "content": "Combining these attribute-based insights with the link prediction results will often  lead to better friend suggestions  Entity resolution: Case study—Finding duplicate  account •When people sell things online on sites such as eBay, or Amazon, the transaction  requires that the buyers trust them.  •The seller’s reputation is extremely important for the transaction to go well. •When sellers develop a poor reputation, a common “solution” is to open another  account. •In some cases, sellers will develop good reputations in many accounts by selling  small items, leveraging that reputation to sell a few big items at which point they  defraud the buyers, absconding with the money and closing the account.  •Toprotectbuyers,companiesthathostonlinesaleswanttoensurethat peoplearenotmaintainingmultipleaccountswithoutanobviouslink betweenthem. •Knowingwhichaccountsbelongtothesamepersonallowsthe companytotrackthegoodandbadactionsofeachuniquepersonand tohavethepowertosuspendalltheaccountsifthesellerdoes somethingverybadononeofthem,orifthesumofbadbehavior acrosstheaccountscrossessomethreshold. •Entityresolutionworkswellforthistask.Userattributes,likefinancial informationandaddresses,areoftenverydistinctiveandcanhelp identifytheaccounts’owner.Networkinformationcanalsobe included,especiallywhentheaccountsarelinkedtothesameproducts orcustomers.",
+      "content_length": 1347,
+      "content_tokens": 321
+    }
+  ],
+  [
+    {
+      "title": "UNIT-6 Network Propagation.pdf-0",
+      "content": "Propagation in Networks  •Understanding how information spreads over the network. •Epidemic Models: •There are many factors that impact whether persons who are  exposed to a disease catch it: age, nutritional state, overall health,  natural immunity, length of their contact with disease carrier etc. •But, it is difficult to decide on every factor for each person. •So, there is a need to simplifying the assumption to model the  process.  •Compartmental models: •This categorizes the people according to their state with respect to  the disease. •Combining the first letters, there are four models: SI, SIR, SIRS, and SIS •SI: Person is susceptible, then can become  infected, but once  infected never recovers.    Threshold models •Inthecompartmentalmodelsdiscussedabove,apersoniseither susceptibletoadiseaseornot;thereisnoconsiderationgiventothe levelofsusceptibilityortowhatmakesapersonmoreorlesslikelyto catchadisease. •Athresholdmodelconsidershowmanyinfectedindividualsaperson mustbeexposedtobeforebecominginfected. •Thisiscalledak-thresholdmodel,andkrepresentsthenumberof neighborswhomustbeinfectedforanodetocatchthedisease.",
+      "content_length": 1132,
+      "content_tokens": 286
+    },
+    {
+      "title": "UNIT-6 Network Propagation.pdf-1",
+      "content": "•Ifsomeonecanbecomeinfectedfromonlyoneneighbor,thisisa1- thresholdmodel.Ifthreeneighborsmustbesickforthediseasetobe passed,itisa3-thresholdmodel.  •Node5,indicatedinblack,startsoffas infected. •Ina1-thresholdmodel,nodes1,6,and9 couldbeinfectedbytheirsickneighbor,node 5. •Ina2-thresholdmodel,nonodescanbe infectedbecauseonlynode5issick,andthus nonodehas2sickneighbors. •Thisistrueforanyk>1inthisgraphsince onlyonenodeissickandthusnonodewill everhavemorethanonesickneighbor.  •Infectionsspreadinsteps;thereisaninitiallyinfectednode, thenitsneighborsareinfected,thenthosenodes’neighbors,and soon. •Moreformally,thesestagescanbetreatedastimesteps.The networkbeginsattime0,t=0. •Then,atthenextstep(t=1),thefirstsetofneighborsare infected. •Attimet=2,thenextsetareinfected,andsoon. •Nodes2,5,and11areinfectedattimet=0.",
+      "content_length": 813,
+      "content_tokens": 287
+    },
+    {
+      "title": "UNIT-6 Network Propagation.pdf-2",
+      "content": "•Ina1-thresholdmodel,alltheneighborsofthesenodeswillbe infectedatstept=1-nodes1,3,6,7,9,10,12,and15. •Attimet=2,alltheremainingnodeswillbeinfectedbecause theirneighborswillbesick. In a 2-threshold model: Nodes with two sick neighbors will be infected. At first, that will only be nodes 1 and 6 (infected by 2 and 5)  Then, at time t = 1, nodes 7 and 10 will be infected by the combination of 6 and  11. and so on.     The firefighter problem •Dependingonthevalueofk,notallofnodeP’sneighborswillnecessarily becomeinfected,butthepossibilityofinfectionishigherwhennodePissick.If wewantedtostoptheinfectionfromspreading,eliminatingthepossibilityofnode Pbecomingsickwouldhaveabigimpact.",
+      "content_length": 681,
+      "content_tokens": 219
+    },
+    {
+      "title": "UNIT-6 Network Propagation.pdf-3",
+      "content": "•Cancertainnodesbe“vaccinated”orremovedfromthenetworksothattheyare nolongersusceptibletoinfectionandthuswillneverbeabletopassiton? •Conversely,ifwewanttospreadsomething,likeaviralvideo,aretherenodes whosenetworkpositionallowsthemtoreachawideraudiencethanothernodes.  •IntheFirefighterProblem,thinkofnodesastreesinaforestandasthespreading diseasebeingafire. •Treescancatchonfireifneighboringtreesareonfire,unlessafirefighteristhere topreventit. •Usingak-thresholdmodel,atreewillcatchonfireifkofitsneighborsareonfire, unlessthereisafirefighter. •Attimet=0,aninitialsetoffiresispresentinthenetwork. •Then,attimet=1,wecanplacesomenumber(callitn)offirefightersontotrees inthenetwork. •Attimet=2,thefirewillspreadtosusceptibletreesthatarenotprotectedby firefighters. •Attimet=3,wecanplacenmorefirefighters,andatt=4,thefirespreadsagain.",
+      "content_length": 829,
+      "content_tokens": 276
+    },
+    {
+      "title": "UNIT-6 Network Propagation.pdf-4",
+      "content": "Theproblemprogressesinalternatingturnsuntilthefireisstoppedorallnodes areonfire(i.e.,infected)      Stochastic models •Thecompartmentalmodelsandthresholdmodelsdiscussedaboveare deterministicmodels;theyassumethatanysusceptibleindividualwhoisexposed toainfectedperson(ortokinfectedpeople)willbecomeinfected. •Stochasticmodelsintroduceprobabilitiesintothemodels. •Letpbetheprobabilitythatadiseaseistransmittedfromaninfectedpersontoa susceptiblepersonatagiventimestep. •Thevalueforpwillrangefrom0to1,where0meansthereisa0%chanceof transmission,and1meansa100%chanceoftransmission.Ifp=0.6,thechance oftransmissionis60%  •Node A starts out as infected, and nodes B, C, and D are susceptible. •Assume a 1-threshold model, and let p =0.8 (an 80% transmission rate)  •At time t = 1, node B can be infected by node A.  •Since p = 0.8, there is an 80% chance that node B gets infected.  •At time t = 2, node C can become infected if node B was infected at time t =1. There are two possibilities.",
+      "content_length": 982,
+      "content_tokens": 298
+    },
+    {
+      "title": "UNIT-6 Network Propagation.pdf-5",
+      "content": "•If node B was infected, there is an 80% chance it will pass the disease on to node C.  •If node B was not infected (which happens 20% of the time), there is no chance node C can catch it, since node B does not  have the disease. •Thus, there are three possible things that can happen:  • Node B is infected and passes the disease on to C.  • Node B is infected and does not pass the disease on to C.  • Node B is not infected and thus cannot pass the disease on to C To find out how likely it is that node C becomes infected, the probability of each option has to be considered.  •Theothertwopossibleoutcomesalsohaveaprobabilityof happening.TheprobabilitythatBissickbutdoesnotpassonthe diseaseis •TheprobabilityofnodeDbecominginfectedfollowsclearly.NodeCis theonlynodethatcaninfectD.TheprobabilitythatCisinfectedis 0.64.Theprobabilityoftransmissionis0.8.Thus,thechancenodeD isinfectedis:  Threshold model and the probability that nodes A and B are infected is 1 (a  100% chance of infection) Let p = 0.6.",
+      "content_length": 1005,
+      "content_tokens": 275
+    },
+    {
+      "title": "UNIT-6 Network Propagation.pdf-6",
+      "content": "What is the chance that C becomes  infected? There are three scenarios where C can be infected in a 1-threshold model:  • Node A passes the disease, Node B passes the disease.  • Node A passes the disease, Node B does not pass it.  • Node A does not pass the disease, Node B passes it.  Note that the other possibility is that neither node passes the disease, but in  that case, node C does not get infected.   •Thus, the chance that C is infected is  0.36+ 0.24 + 0.24 = 0.84  •Ifthissamenetworkisconsideredwitha2-thresholdmodel,thenbothnodes connectedtoCmustbeinfectedandpassonthediseaseinorderforCtocatchthe disease. •Noneoftheotherscenarioswillleadtoinfectionina2-thresholdmodel,sothe chancethatCbecomesinfectedissimply0.36.  •It includes node C, which has a 0.84 chance of being infected, and two additional  nodes: D and E.  •Node D also has a probability of being infected. Let PI(D) = 0.7.",
+      "content_length": 897,
+      "content_tokens": 258
+    },
+    {
+      "title": "UNIT-6 Network Propagation.pdf-7",
+      "content": "•Knowing this, what is the probability that E becomes infected? •In a 1-threshold model, there are several more scenarios that will lead to  infection An extension of the network   •Ina1-thresholdmodel,thereareseveralmorescenariosthatwilllead toinfection.First,wecomputetheprobabilityforeachofthose scenarios.ThatistheprobabilityofthescenarioforC(infectedor not)timestheprobabilityofthescenarioforD(infectedornot):          Applications of epidemic models to social media •Viralmarketingisatopicofgreatinteresttocompanies,especiallyonlineretailers,becauseit spreadsinformationaboutproductsatnocosttotheseller.Thisisgoodiftheproductreviewsand feedbackarepositive,butitcanbackfireifnegativeinformationspreadsvirally. •Amethodofmarketingwherebyconsumersareencouragedtoshareinformationabouta company'sgoodsorservicesviatheinternet. •Researchers(Leskovecetal.,2007)investigated“viral”recommendationsthatuserssendtoone anotherandtheirimpactonpurchasingbehavior.",
+      "content_length": 955,
+      "content_tokens": 267
+    },
+    {
+      "title": "UNIT-6 Network Propagation.pdf-8",
+      "content": "•Nodesinthenetworkwereusersofane-commercesystem,andtherewasanedgebetweenusersif onerecommendedanitemtotheother. •TheresearchersusedanSIRmodel,wheresusceptibleindividualshavenotpurchasedanitem,an “infected”personbuysanitembasedonarecommendation,andafterpurchase,apersonis “recovered”andnotsusceptibletobuyingtheitemagain. •Usingrealdatafromthesystem,theresearcherslookedatathresholdmodeltounderstandhow recommendationsspreadinanetwork. •Theyfoundthat,overall,recommendationsdidnotspreadmuchinaviralway,butforsome productstherecommendationsdidhavemoreofareachintothenetwork.",
+      "content_length": 572,
+      "content_tokens": 181
+    }
+  ],
+  [
+    {
+      "title": "UNIT-7-Introduction to community discovery.pdf-0",
+      "content": "UNIT-7 Introduction to  community discovery  Introduction to community discovery •Manyrealworldproblemscanbeeffectivelymodeledascomplex relationshipnetworkswherenodesrepresententitiesofinterestandedges mimictheinteractionsorrelationshipsamongthem. •Discoveringcommunitiesincomplexnetworksmeansgroupingnodes similartoeachother,touncoverlatentinformationaboutthem.There arehundredsofdifferentalgorithmstosolvethecommunitydetection task,eachwithitsownunderstandinganddefinitionofwhata \"community\"is. •Community discovery is the problem of extracting all the communities in  a given network. •Community identification is the problem of identifying the community to  which a given set of nodes from the network belong.  •Complexnetworkscommonlyhavecommunitystructures,inwhich pairsofnodesbelongingtothesamecommunityareclosely connected,whilepairsofnodesbelongingtodifferentcommunities arerelativelysparselyconnected. •Communitydetectionaimsatgroupingnodesinaccordancewiththe relationshipsamongthemtoformstronglylinkedsubgraphsfromthe entiregraph. •Thestudyofcomplexrelationshipnetworks,recentlyreferredtoas networkscience,canprovideinsightintotheirstructures,properties andemergentbehaviors.",
+      "content_length": 1186,
+      "content_tokens": 281
+    },
+    {
+      "title": "UNIT-7-Introduction to community discovery.pdf-1",
+      "content": "•Findrigorousmethodsforuncoveringandunderstandingimportant networkorsub-network(community) •Extractingsuchcommunitystructureandleveragingthemfor predictingtheemergent,critical,andcausalnatureofsuchnetworksin adynamicsettingisofgrowingimportance.  •WhyCommunityDetection? •Whenanalyzingdifferentnetworks,itmaybeimportanttodiscover communitiesinsidethem. •Communitydetectiontechniquesareusefulforsocialmediaalgorithmsto discoverpeoplewithcommoninterestsandkeepthemtightlyconnected. •Communitydetectioncanbeuseddetectgroupswithsimilarpropertiesand extractgroupsforvariousreasons.Forexample,thistechniquecanbeusedto discovermanipulativegroupsinsideasocialnetworkorastockmarket. •Communitiescanbeimplicitorexplicit.Explicitcommunitiesarethose,in whichagroupingispredefinedandmembersjoiningthegroupforma community.InthiscaseCommunitiesaredirectlyvisible,forexample whatsappgroup. •Implicitcommunitiesontheotherhanddonothaveanypredefined classification.Wehavetoanalyzetheactivitiesoftheindividualstoformthe community.Communitydetectionisusedforimplicitcommunitiesonly.",
+      "content_length": 1061,
+      "content_tokens": 269
+    },
+    {
+      "title": "UNIT-7-Introduction to community discovery.pdf-2",
+      "content": "IssuesinCommunitydetection: NoPreciseDefinition: •AccordingtoKernighan–Linalgorithm,”Communitiesarethosepartsofgraph thathavelesstieswithrestofthegraph” •Wassermanetal.consideredCommunityasmaximalsubgraph,thatcannot beextendedbyadditionofmoreverticeswithoutloosingitsproperty. •Butinverysimplewords,acommunitycanbedefinedasasubgraphwith moreintraclusteredgesthaninterclusteredges.Itmeanstheyaregroupof nodeswhichhavemoreinteractionsamongthemselvesthanothers.  •In spite of community detection being one of the strongest fields of  research in social media mining, a proper definition of this problem  does not exist. •Due to lack of proper definition there are different views of  community by different researchers. •These different views are not disjoint, they can sometime lead to  common result. •Challenges Involved •i. Analyzing which view of community can be beneficial under what  conditions. •ii. Selecting a particular viewpoint for community to start community  detection   •Dynamic Nature of Communities •Most of the work in community detection is performed on a static  network. These cannot be applied on Complex Network which is ever  changing like Social Media. Dynamic communities keep on changing with  time.",
+      "content_length": 1226,
+      "content_tokens": 289
+    },
+    {
+      "title": "UNIT-7-Introduction to community discovery.pdf-3",
+      "content": "•As dynamic communities change with time, different situations are faced in  detection of such communities.  ➢Growth: New nodes can be included in a community with time. ➢Contraction: Some nodes can leave the community, making the community smaller. ➢Merging: Different communities can combine with time, resulting in a bigger merged  community. ➢Splitting: Two or more communities may be formed by splitting one community. ➢Birth: A new community can emerge which was not existent at an earlier time  interval. ➢Death: A community can entirely disappear at any time. ➢Resurgence: Community can be dormant for certain period and then reappear as if  nothing happened.    •Communities Overlap an Issue •Most of the early research in community detection assumes community to be  disjoint group of densely connected nodes. But in real world a person can be  member of more than one community.  •This also applies in Social Media. It means generally the communities are not  disjoint, they are overlapping in nature.  Core Methods •Informally, a community in a network is a group of nodes with greater ties  internally than to the rest of the network.",
+      "content_length": 1147,
+      "content_tokens": 261
+    },
+    {
+      "title": "UNIT-7-Introduction to community discovery.pdf-4",
+      "content": "•This intuitive definition has been formalized in a number of competing ways,  usually by way of a quality function, which quantifies the goodness of a given  division of the network into communities. •Some of these quality metrics, such as Normalized Cuts, Modularity, etc., but none  has gained universal acceptance since no single metric is applicable in all  situations.  ➢The normalized cut criterion measures both the total dissimilarity between the different groups  as well as the total similarity within the groups. ➢Modularity is a measure of community detection which measures the strength of division of a  network into communities. Networks with a high modularity have a dense connection between  the nodes within modules but a spread connections between nodes in different modules.  •Algorithms for community discovery vary on a number of important dimensions,  including their approach to the problem as well as their performance  characteristics.  •An important dimension on which algorithms vary in their approaches is whether  or not they explicitly optimize a specific quality metric. ✓Spectral methods, the Kernighan-Lin algorithm are all examples of algorithms which explicitly try to  optimize a specific quality metric,  ✓Other algorithms, such as Markov Clustering (MCL) and clustering via shingling do not do so.",
+      "content_length": 1337,
+      "content_tokens": 269
+    },
+    {
+      "title": "UNIT-7-Introduction to community discovery.pdf-5",
+      "content": "•Another dimension on which algorithms vary is in how (or even whether) they let  the user control the granularity of the division of the network into communities.  ✓Some algorithms (such as spectral methods) are mainly meant for bi-partitioning the network, but this  can be used to recursively subdivide the network into as many communities as desired. ✓Other algorithms such as agglomerative clustering or MCL allow the user to indirectly control the  granularity of the output communities through certain parameters. •Another important characteristic differentiating community discovery algorithms  is the importance they attach to a balanced division of the network. •Algorithms also vary in their scalability to big networks, with multi-level  clustering algorithms scaling better than many other approaches.  •GivenagraphG=(V,E)andasubsetSofV,thecutδ(S)inducedbySisthesubsetofedges(i,j) ∈Esuchthat|{i,j}∩S|=1. •Thatis,δ(S)consistsofallthoseedgeswithexactlyoneendpointinS. •Ingraphtheory,acutisasetofedgesremovalofwhichdividesaconnectedgraphintotwonon- overlapping(disjoint)subsets.",
+      "content_length": 1088,
+      "content_tokens": 282
+    },
+    {
+      "title": "UNIT-7-Introduction to community discovery.pdf-6",
+      "content": "•Theminimumcut(ormin-cut)isdefinedastheminimumnumberofedges,whenremovedfroma graph,dividethegraphintotwodisjointsets.  Quality Functions •A variety of quality functions or measures have been proposed in the literature to capture the  goodness of a division of a graph into clusters.  •Let A denotes the adjacency matrix of the network or graph, with A(i, j) representing the edge  weight or affinity between nodes iand j, and V denotes the vertex or node set of the graph or  network. •In words, the normalized cut of a group of nodes S is the sum of weights of the edges that connect S  to the rest of the graph, normalized by the total edge weight of S and that of the rest of the graph  ̄  S. •The groups with low normalized cut make for good communities, as they are well connected  amongst themselves but are sparsely connected to the rest of the graph.  •The conductance of a group of vertices S ⊂V is defined as •The normalized cut (or conductance) of a division of the graph into k clusters V1,    , Vkis the sum of the  normalized cuts (or conductances) of each of the clusters Vi{i= 1,",
+      "content_length": 1095,
+      "content_tokens": 279
+    },
+    {
+      "title": "UNIT-7-Introduction to community discovery.pdf-7",
+      "content": ", k} •The Kernighan-Lin (KL) objective looks to minimize the edge cut under the constraint that all clusters be of  the same size (making the simplifying assumption that the size of the network is a multiple of the number of  clusters) •Here A(Vi, Vj) denotes the sum of edge affinities between vertices in Vi and Vj, i.e. A(Vi, Vj) =u∈Vi,v∈Vj A(u, v)  •Modularity: •Measures the goodness of a clustering of a graph.  •Advantages of modularity is that it is independent of the number of clusters that the graph is divided into.  •The intuition behind the definition of modularity is that the farther the subgraph corresponding to each  community is from a random subgraph the better or more significant the discovered community structure is. •The modularity Q for a division of the graph into k clusters {V1,    , Vk} is given by: •In the above, the Vis are the clusters, m is the number of edges in the graph and degree(Vi) is the total degree  of the cluster Vi.  •For each cluster, we take the difference between the fraction of edges internal to that cluster and the fraction  of edges that would be expected to be inside a random cluster with the same total degree.",
+      "content_length": 1170,
+      "content_tokens": 296
+    },
+    {
+      "title": "UNIT-7-Introduction to community discovery.pdf-8",
+      "content": "The Kernighan-Lin(KL) algorithm •TheKLalgorithmisoneoftheclassicgraphpartitioningalgorithmswhich optimizestheKLobjectivefunctioni.e.minimizetheedgecutwhilekeepingthe clustersizesbalanced. •The algorithm is iterative innatureandstartswithaninitialbipartitionofthe graph. •Ateachiteration,thealgorithmsearchesforasubsetofverticesfromeachpartof thegraphsuchthatswappingthemwillleadtoareductionintheedgecut. •Thegaingvofavertexvisthereductioninedge-cutifvertexvismovedfromits currentpartitiontotheotherpartition. •TheKLalgorithmrepeatedlyselectsfromthelargerpartitionthevertexwiththe largestgainandmovesittotheotherpartition; •Avertexisnotconsideredformovingagainifithasalreadybeenmovedinthe currentiteration. •Afteravertexhasbeenmoved,thegainsforitsneighboringverticeswillbe updatedinordertoreflectthenewassignmentofverticestopartitions.  •Problem: Divide a weighted graph with 2n nodes into two parts, each  of size n, to minimize the sum of the weights crossing the two parts.",
+      "content_length": 975,
+      "content_tokens": 287
+    },
+    {
+      "title": "UNIT-7-Introduction to community discovery.pdf-9",
+      "content": "Agglomerative/Divisive Algorithms •Agglomerativealgorithmsbeginwitheachnodeinthesocialnetworkinitsowncommunity,andat eachstepmergecommunitiesthataredeemedtobesufficientlysimilar,continuinguntileitherthe desirednumberofcommunitiesisobtainedortheremainingcommunitiesarefoundtobetoo dissimilartomerge any further. •Divisivealgorithmsoperateinreverse;theybeginwiththeentirenetworkasonecommunity,and ateachstep,chooseacertaincommunityandsplititintotwoparts. •Bothkindsofhierarchicalclusteringalgorithmsoftenoutputadendrogramwhichisabinarytree, wheretheleavesarenodesofthenetwork,andeachinternalnodeisacommunity. •Inthecaseofdivisivealgorithms,aparent-childrelationshipindicatesthatthecommunity representedbytheparentnodewasdividedtoobtainthecommunitiesrepresentedbythechild nodes. •Inthecaseofagglomerativealgorithms,aparent-childrelationshipinthedendrogramindicates thatthecommunitiesrepresentedbythechildnodeswereagglomerated(ormerged)toobtainthe communityrepresentedbythe parent node.",
+      "content_length": 982,
+      "content_tokens": 275
+    },
+    {
+      "title": "UNIT-7-Introduction to community discovery.pdf-10",
+      "content": "•Agglomerative clustering is the more common of the two paradigms.  The standard •greedy algorithm proceeds as follows: 1. Start with all data points in their own clusters 2. Repeat until only one cluster remains: -Find 2 clusters (C1, C2) that are most similar (that have the smallest pairwise  cluster dissimilarity d(C1, C2) ) -Merge C1, C2 into one cluster  Content:https://www.geeksforgeeks.org/ml-hierarchical-clustering-agglomerative-and-divisive-clustering/    Computing Distance Matrix While merging two clusters we check the distance between two every pair of  clusters and merge the pair with the least distance/most similarity.  There are different ways of defining Inter Cluster distance/similarity. Some of  them are: 1.Min Distance: Find the minimum distance between any two points of the  cluster. 2.Max Distance: Find the maximum distance between any two points of  the cluster. 3.Group Average: Find the average distance between every two points of  the clusters.  Girvan and Newman’s divisive algorithm: •Newman and Girvan proposed a divisive algorithm for community discovery, using ideas of edge  betweenness.",
+      "content_length": 1130,
+      "content_tokens": 274
+    },
+    {
+      "title": "UNIT-7-Introduction to community discovery.pdf-11",
+      "content": "•Edge betweenness measures are defined in a way that edges with high betweenness scores are  more likely to be the edges that connect different communities.  •That is, inter-community edges are designed to have higher edge betweenness scores than  intra-community edges do.  •Hence, by identifying and discarding such edges with high betweenness scores, one can disconnect  the social network into its constituent communities.  Girvan and Newman’s divisive algorithm: •Shortest path betweenness is one example of an edge betweenness measure: the intuitive idea here  is that since there will only be a few inter-community edges, shortest paths between nodes that  belong to different communities will be constrained to pass through those few inter-community  edges.  •In random-walk betweenness, the choice of path connecting any two nodes is the result of random  walk instead of geodesic as in the case of shortest path.  •The current-flow betweenness definition is motivated by the circuit theory.  •First the network is virtually transformed into a resistance network where each edge is replaced by  a unit resistance and two nodes are chosen as unit current source and sink. •Then the betweenness of each edge is computed as the sum of absolute values of the currents  flowing on it with all possible selections of node pairs.",
+      "content_length": 1331,
+      "content_tokens": 274
+    },
+    {
+      "title": "UNIT-7-Introduction to community discovery.pdf-12",
+      "content": "•General idea: “If two communities are joined by only a few inter- community edges, then all paths through the network from vertices  in one community to vertices in the other must pass along one of  those few edges.”  •Community structure can be revealed by removing edges that with  high betweenness •Algorithm is based on a divisive clustering idea ➢Betweenness of an edge eis defined as the number of shortest paths  that include e ➢Edges that lie between communities tend to have high betweenness  The general form of their algorithms is as follows: 1 Calculate betweenness score for all edges in the network using any measure. 2 Find the edge with the highest score and remove it from the network. 3 Recalculate betweenness for all remaining edges. 4 Repeat from step 2. •The above procedure is continued until a sufficiently small number of communities are obtained, and a  hierarchical nesting of the communities is also obtained as a natural by-product.",
+      "content_length": 962,
+      "content_tokens": 208
+    },
+    {
+      "title": "UNIT-7-Introduction to community discovery.pdf-13",
+      "content": "•Convergence criteria can be ➢No more edges ➢Desired modularity  Girvan-Newman algorithm as a hierarchical clustering algorithm •One can view this algorithm as a  top-down (divisive) hierarchical  clustering algorithm •The root of the dendrogram groups all nodes into one  community •Each branch of the tree  represents the order of splitting  the network as edges are  removed Graph vertices The main disadvantage of this approach is the high computational cost: simply  computing the betweenness for all edges takes O(|V ||E|) time, and the entire algorithm  requires O(|V |  3 ) time.    Newman’s greedy optimization of modularity: •Newman proposed a greedy agglomerative clustering algorithm for optimizing modularity. •The basic idea of the algorithm is that at each stage, groups of vertices are successively merged to  form larger communities such that the modularity of the resulting division of the network increases  after each merge.  •At the start, each node in the network is in its own community, and at each step one chooses the  two communities whose merger leads to the biggest increase in the modularity.",
+      "content_length": 1122,
+      "content_tokens": 254
+    },
+    {
+      "title": "UNIT-7-Introduction to community discovery.pdf-14",
+      "content": "•We only need to consider those communities which share at least one edge, since merging  communities which do not share any edges cannot result in an increase in modularity -hence this  step takes O(|E|) time. •An additional data structure which maintains the fraction of shared edges between each pair of  communities in the current partition is also maintained, and updating this data structure takes  worst-case O(|V |) time.  •There are a total of |V | − 1 iterations (i.e. mergers), hence the algorithm requires O(|V |  2 ) time.   Spectral Algorithm •Spectralmethodsgenerallyrefertoalgorithmsthatassignnodestocommunities basedontheeigenvectorsofmatrices,suchastheadjacencymatrixofthe networkitselforotherrelatedmatrices. •Thetopkeigenvectorsdefineanembeddingofthenodesofthenetworkaspoints inak-dimensionalspace,andonecansubsequentlyuseclassicaldataclustering techniquessuchasK-meansclusteringtoderivethefinalassignmentofnodesto clusters. •Themainideabehindspectralclusteringisthatthelow-dimensional representation,inducedbythetopeigenvectors,exposestheclusterstructureinthe originalgraphwithgreaterclarity.",
+      "content_length": 1113,
+      "content_tokens": 296
+    },
+    {
+      "title": "UNIT-7-Introduction to community discovery.pdf-15",
+      "content": "•The main matrix that is used in spectral clustering applications is the  Laplacian matrix L. •If A is the adjacency matrix of the network, and D is the diagonal  matrix with the degrees of the nodes along the diagonal, then the  unnormalized Laplacian L is given as L = D −A.  •The Laplacian (or the normalized Laplacian) Lis given by  L= D −1/2 (D − A)D −1/2  = I − D −1/2  AD −1/2   It can be verified that both L and Lare symmetric and positive definite,  and therefore have real and positive eigenvalues. •The eigenvector corresponding to the smallest non-zero eigenvalue of  L is known as the Fiedler vector, and usually forms the basis for bi- partitioning the graph.  Disadvantages: •Themaindisadvantageofspectralalgorithmsliesintheircomputational complexity. •Mostmodernimplementationsforeigenvectorcomputationuseiterative algorithmssuchastheLanczosalgorithm,whereateachstageaseriesofmatrix vectormultiplicationsareperformedtoobtainsuccessiveapproximationstothe eigenvectorcurrentlybeingcomputed.",
+      "content_length": 1005,
+      "content_tokens": 282
+    },
+    {
+      "title": "UNIT-7-Introduction to community discovery.pdf-16",
+      "content": "•ThecomplexityforcomputingthetopeigenvectorisO(kM(m)),wherekisthe numberofmatrix-vectormultiplicationsandM(m)isthecomplexityofeachsuch multiplication,dependentprimarilyonthenumberofnon-zerosminthematrix. •kdependsonthespecificpropertiesofthematrixathand-suchasthespectral gapi.e.thedifferencebetweenthecurrenteigenvalueandthenexteigenvalue; •thesmallerthisgap,themorenumberofmatrix-vectormultiplicationsare requiredforconvergence. •Inpractice,spectralclusteringishardtoscaleuptonetworkswithmorethantens ofthousandsofverticeswithoutemployingparallelalgorithms.  Multi-level Graph Partitioning •Themainideahereistoshrinkorcoarsentheinputgraphsuccessivelysoasto obtainasmallgraph,partitionthissmallgraphandthensuccessivelyprojectthis partitionbackuptotheoriginalgraph,refiningthepartitionateachstepalongthe way. •Multi-levelgraphpartitioningmethodsincludemulti-levelspectralclustering, Metis(whichoptimizestheKLobjectivefunction),Graclus(whichoptimizes normalizedcutsandotherweightedcuts.",
+      "content_length": 985,
+      "content_tokens": 293
+    },
+    {
+      "title": "UNIT-7-Introduction to community discovery.pdf-17",
+      "content": "•The main components of a multi-level graph partitioning strategy are: •Coarsening: ✓The goal here is to produce a smaller graph that is similar to the  original graph.  ✓This step may be applied repeatedly to obtain a graph that is small  enough to be partitioned quickly and with high quality. ✓A popular coarsening strategy is to first construct a matching on the  graph, where a matching is defined as a set of edges no two of which  are incident on the same vertex.  ✓For each edge in the matching, the vertices at the ends of the edge  are collapsed together and are represented by a single node in the  coarsened graph.   •2 Initial partitioning:  ✓In this step, a partitioning of the coarsest graph is performed.  ✓Since the graph at this stage is small enough, one may use strategies like  spectral partitioning which are slow but are known to give high quality  partitions. •3 Uncoarsening: ✓In this phase, the partition on the current graph is used to initialize a  partition on the finer (bigger) graph.  ✓The finer connectivity structure of the graph revealed by the uncoarseningis  used to refine the partition, usually by performing local search. This step is  continued until we arrive at the original input graph. At a finer level, Metis uses a variant of the KL algorithm in its uncoarsening phase to refine the partition obtained from previous steps. Graclus, uses weighted kernel k-means for refining the partition.",
+      "content_length": 1434,
+      "content_tokens": 327
+    },
+    {
+      "title": "UNIT-7-Introduction to community discovery.pdf-19",
+      "content": "Coarsening:    •If we want to partition G(N,E), but it is too big to do  efficiently, what can we do? •1) Replace G(N,E) by a coarse approximationG c (N c ,E c ),  and partition G c instead •2) Use partition of G c to get a rough partitioning of G, and  then iteratively improve it •What if G c still too big? •Apply same idea recursively  Multilevel Kernighan-Lin •Coarsen graph and expand partition using maximal matchings •Improve partition using Kernighan-Lin Maximal Matching: •Definition: A matching of a graph G(N,E) is a subset E m of E such that  no two edges in E m share an endpoint •Definition:A maximal matchingof a graph G(N,E) is a matching E m to  which no more edges can be added and remain a matching •A simple greedy algorithm computes a maximal matching       1) Construct a maximal matching  E m of G(N,E) for all edges e=(j,k) in E m              2) collapse matched nodes into a single one Put node n(e) in N c W(n(e)) = W(j) + W(k) for all nodes n in N not incident on an edge in E m   3) add unmatched nodes Put n in N c       ..",
+      "content_length": 1054,
+      "content_tokens": 328
+    },
+    {
+      "title": "UNIT-7-Introduction to community discovery.pdf-20",
+      "content": "do not change W(n) .. Now each node r in N is “inside” a unique node n(r) in N c .. 4) Connect two nodes in Nc if nodes inside them are connected in E for all edges e=(j,k) in E m   for each other edge e’=(j,r) or (k,r) in E  Put edge ee= (n(e),n(r)) in E c W(ee) = W(e’) If there are multiple edges connecting two nodes in N c , collapse them, adding edge weights  Expanding a partition of G c to a partition of G  Markov Clustering •Stijn van Dongen’s Markov Clustering algorithm (MCL) clusters graphs via manipulation  of the stochastic matrix or transition probability matrix corresponding to the graph. •Thetransitionprobabilitybetweentwonodesisalsoreferredtoasstochasticflow. •TheMCLprocessconsistsoftwooperationsonstochasticmatrices,ExpandandInflate. •Expand(M)issimplyM∗M,andInflate(M,r)raiseseachentryinthematrixMtothe inflationparameterr(>1,andtypicallysetto2)followedbyre-normalizingthecolumns tosumto1.",
+      "content_length": 914,
+      "content_tokens": 298
+    },
+    {
+      "title": "UNIT-7-Introduction to community discovery.pdf-21",
+      "content": "•Thesetwooperatorsareappliedinalternationiterativelyuntilconvergence,startingwith theinitialtransitionprobabilitymatrix. •Theexpandstepspreadsthestochasticflowoutofavertextopotentiallynewvertices andalsoenhancesthestochasticflowtothoseverticeswhicharereachablebymultiple paths. •Theinflationstepintroducesanon-linearityintotheprocess,withthepurposeof strengtheningintra-clusterstochasticflowandweakeninginter-clusterstochasticflow.      Other Approaches •LocalGraphClustering: •Alocalalgorithmisonethatfindsasolutioncontainingornearagiven vertex(orvertices)withoutlookingatthewholegraph. •Localalgorithmsareinterestinginthecontextoflargegraphssincetheir timecomplexitydependsonthesizeofthesolutionratherthanthesizeof thegraphtoalargeextent. •However,iftheclustersneedtocoverthewholegraph,thenitisnot possibletobeindependentofthesizeofthegraph. •Themainintuitionisthatrandomwalkssimulatedfrominsideagroupof internallywell-connectednodeswillnotmixwellenough/soonenough,as theclusterboundaryactsabottleneckthatpreventstheprobabilityfrom seepingoutoftheclustereasily.",
+      "content_length": 1063,
+      "content_tokens": 293
+    },
+    {
+      "title": "UNIT-7-Introduction to community discovery.pdf-22",
+      "content": "•Flow-Based Post-Processing for Improving Community Detection: ✓Algorithms for computing the maximum flow in flow networks can be used to  post-process or improve existing partitions of the graph.  •Community Discovery via Shingling: •Broder et al. introduced the idea of clustering web documents  through the use of shingles and fingerprints. •For example, a length-s shingle of a graph node contains s outgoing  links of the node. •A sketch is a constant-size subset of all shingles with a specific length,  with the remarkable property that the similarity between sets of two  objects’ sketches approximates the similarity between the objects. •Gibson et al. attempt to extract dense communities from large-scale  graphs via a recursive application of shingling.",
+      "content_length": 765,
+      "content_tokens": 170
+    }
+  ],
+  [
+    {
+      "title": "Unit-1-Introduction to Social Web.pdf-0",
+      "content": "UNIT-1  What is social web? •The social web encompasses  howwebsites andsoftwarearedesignedanddevelopedin order to  support and fostersocial interaction. •Social web refers to web services, structures and interfaces that support  social interactions among humans.  What is Social network Analysis •A set of relational methods for systematically understanding, identifying,  mapping, and measuring the relationships  and flow among actors. •The Actors can be: ✓people, ✓groups, ✓organizations, ✓computers, ✓URLs,etc. •SNAprovidesbothavisualandamathematicalanalysisofhuman relationships.  What is a Social Network ? Asocialstructuremadeupofindividuals(ororganizations)called \"nodes\",whicharetied(connected)byoneormorespecifictypes ofinterdependency,suchasfriendship,commoninterest -Nodes ➢People ➢Organizations ➢Both(multi-modalnetwork)  •SNA viewssocial relationshipsin terms ofnetwork theoryconsisting  ofnodes andties(also callededges,links orconnections)  Basic concepts of networks (graphs) •A node or vertexis an individual unit (actor) in the graph or system. •A graph or system or networkis a set of units that may be (but are  not necessarily) connected to each other.",
+      "content_length": 1175,
+      "content_tokens": 294
+    },
+    {
+      "title": "Unit-1-Introduction to Social Web.pdf-1",
+      "content": "•Relations (lines, edges, ties) between pair of actors. -Directed or undirected -Binary or valued  •Two actors are connected by social relationship. ✓Kinship   [ex: Son of] ✓Role based  [ex: Friend of, teacher of] ✓Affective [ex: likes] ✓Interactions [ex: gives advice, talks to] ✓Affiliations  [ex: belongs to same organization]  •Simple graphsare graphs without multiple edges or self-loops.  •Directed Graph (digraph) •Edges have directions •An edge is an ordered pair of nodes  •Weighted graphs: •Is a graph for which each edge has an associated weight, usually  given by a weight functionw: E→R. 1 2 3 4 56 .5 1.2 .2 .5 1.5 .3 1 4 56 23 2 1 3 5  •A neighborhoodN for a vertex or node is the set of its immediately  connected nodes. •Neighbor: A vertex u is a neighbor of (or equivalently adjacent to) a vertex v  in a graph G = (V, E) if there is an edge {u, v} ∈E.",
+      "content_length": 870,
+      "content_tokens": 258
+    },
+    {
+      "title": "Unit-1-Introduction to Social Web.pdf-2",
+      "content": "For a directed graph a vertex  u is an in-neighbor of a vertex v if (u, v) ∈E and an out-neighbor if (v, u) ∈E.  We also say two edges or arcs are neighbors if they share a vertex.  •Incident:  An edge is incident on a vertex if the vertex is one of its  endpoints. Similarly  a vertex is incident on an edge if it is one of the  endpoints of the edge.  •Degree:  The degree k i of a vertex or node is the number of other  nodes in its neighborhood. •Paths: A path in a graph is a sequence of adjacent vertices.   •Reachability and connectivity:A vertex v is reachable from a vertex u  in G if there is a path starting at v and ending at u in G. •Cycles:  In a directed graph a cycle is a path that starts and ends at  the same vertex. A cycle can have length one (i.e. a self loop) A simple cycle is a cycle that has no repeated vertices other than the start and  end vertices being the same.   •Trees and forests: An undirected graph with no cycles is a forest and  if it is connected it is called a tree.  •A rooted tree is a tree with one vertex designated as the root.",
+      "content_length": 1073,
+      "content_tokens": 299
+    },
+    {
+      "title": "Unit-1-Introduction to Social Web.pdf-3",
+      "content": "For a  directed graph the edges are typically all directed toward the root or  away from the root. •Directed acyclic graphs. A directed graph with no cycles is a directed  acyclic graph (DAG)  •Distance.   Representation of Graphs •Adjacency matrix: An n ×n matrix of binary values in which location (i, j) is 1 if (i, j) ∈E and 0  otherwise.  Adjacency list: An array A of length n where each entry A[i] contains a pointer to a linked  list of all the out-neighbors of vertex i. In an undirected graph with edge {u,  v} the edge will appear in the adjacency list for both u and v. Adjacency array: Adjacency array keeps the neighbors of all vertices, one after another, in an  array adj; and separately, keeps an array of indices that tell us where in the  adj array to look for the neighbors of each vertex  Basic network structures and properties •Subnetworks ✓Subset of the nodes and edges in a graph. ✓Is a subset of the nodes of a network, and all of the edges linking these nodes ✓Components are portions of the network that are disconnected from each  other.",
+      "content_length": 1066,
+      "content_tokens": 276
+    },
+    {
+      "title": "Unit-1-Introduction to Social Web.pdf-4",
+      "content": "✓Different types: ➢Singletons ➢Dyad ➢triad  •Different types of triads. Fig. credit : https://www.oreilly.com/library/view/social-network-analysis/9781449311377/ch04.html  Basic network structures and properties •Cliques •Groups of nodes of any size have properties that are interesting. •When all nodes in a group are connected to one another, it is called as clique.  •A clique is defined as amaximal complete subgraphof a given graph— •Ex:a group of people where everybody is connected directly to everyone else.  •Clusters •Acollection of nodes on the basis of similarity and dissimilarity between  them.  •Egocentric networks •Ego-centric networks (or shortened to “ego” networks) are a  particular type of network which specifically maps the connections of  and from the perspective of a single person (an “ego”) •This is a network we pull out by selecting a node and all of its  connections.",
+      "content_length": 898,
+      "content_tokens": 238
+    },
+    {
+      "title": "Unit-1-Introduction to Social Web.pdf-5",
+      "content": "▪1-degree egocentric network  ▪1.5-degree egocentric network ▪1.5 egocentric network excluding center ▪2-degree egocentric network      Paths and connectedness •Path •A path is a series of nodes that can be traversed following edges between  them. •Length of a path= Number of edges in the path •Shortest paths is important measure in network analysis and are sometimes  called geodesic distances.  Connectedness •Twonodesinagrapharecalledconnectedifthereisapathbetweentheminthe network. •Anentiregraphiscalledconnectedifallpairsofnodesareconnected. •StronglyConnected:Agraphissaidtobestronglyconnectedifeverypairof vertices(u,v)inthegraphcontainsapathbetweeneachother. •Ifapathcannotbefoundbetweenallpairsofnodesusingthedirectionofthe edges,butpathscanbefoundifthedirectededgesaretreatedasundirected,then thegraphiscalledweaklyconnected. •Ifagraphisnotconnected,itmayhavesubgraphsthatareconnected.Theseare calledconnectedcomponents.  G G’ Graph G is weakly connected.",
+      "content_length": 968,
+      "content_tokens": 274
+    },
+    {
+      "title": "Unit-1-Introduction to Social Web.pdf-6",
+      "content": "Strongly connected Graph  Bridges and Hubs •A bridgeis an edge in graph that, if removed, will increase the  number of connected components in a graph. •A hub is  the most connected nodes in the network. Edge PF is a bridge Node P is the hub  Fig Credit: https://en.wikipedia.org/wiki/Bridge_(graph_theory)  Network Structure and Measures •Tool for understanding connected data structures( such as  graphs, or networks.) Describing Nodes and Edges: •Measures which describe how nodes are connected each other and network as a  whole: ➢Degree of a node. ✓Undirected graph number of edges connected to it. ✓Directed graph-→indegree, outdegree. Sample undirected graph: Find indegree  and outdegree of each node  ➢Centrality ✓Centrality of a node is an estimate of its importance in the network.  ✓“central” measure may vary depending on the context. ✓The interpretation of the centrality measures is left to a human  analyst. ✓Different ways to measure centrality of a node. oDegree centrality oCloseness centrality oBetweenness centrality  oEigenvector centrality.  ➢Degree Centrality ✓Degree centrality is  thenumber of edges connected to a given node.",
+      "content_length": 1152,
+      "content_tokens": 293
+    },
+    {
+      "title": "Unit-1-Introduction to Social Web.pdf-7",
+      "content": "✓Ex: In a social network, this might mean the number of friends an  individual has. ✓When to use it:For finding very connected individuals, popular individuals,  individuals who are likely to hold most information or individuals who can  quickly connect with the wider network.  •Closeness centrality ✓Indicates how close a node is to all other nodes in the network. ✓It is calculated as the average of the shortest path length from the node to  every other node in the network. ✓Lower values indicate more central nodes. [If reciprocals are taken then  higher values indicate more central nodes] ✓When to use it:For finding the individuals who are best placed to influence  the entire network most quickly.    ➢Betweenness centrality ✓Betweennesscentralitymeasureshowimportantanodeistotheshortestpathsthroughthe network. ✓Definedasthenumberofshortestpathsthatgothroughagivennode. ✓Nodeswithhighbetweennessisinfluentialinanetwork. ✓Theycapturethemostamountofinformationflowingthroughthenetworkbecausethe informationtendstoflowthroughthem. ✓Whentouseit:Forfindingtheindividualswhoinfluencetheflowaroundasystem. ✓TocomputebetweennessofanodeN oSelectapairofnodesandfindalltheshortestpathsbetweenthosenodes.",
+      "content_length": 1203,
+      "content_tokens": 298
+    },
+    {
+      "title": "Unit-1-Introduction to Social Web.pdf-8",
+      "content": "oThencomputethefractionofthoseshortestpathsthatincludenodeN. oRepeatthisprocessforeverypairofnodesinthenetwork. oAddupthefractionscomputed,andthisisthebetweennesscentralityfornodeN.      ➢Eigenvector centrality ✓Eigenvector centrality measures a node’s importance while giving  consideration to the importance of its neighbors. ✓When to use it:Eigen Centrality is a good ‘all-round’ centrality score, handy  for understanding human social networks, ✓Ex:anode with 300 relatively unpopular friends on Facebook would have  lower eigenvector centrality than someone with 300 very popular friends. ✓It is determined by performing a matrix calculation to determine what is  called the principal eigenvector using the adjacency matrix.  Describing networks •A number of measures can be used to describe the structure of a  network as a whole. ➢Degree distribution ✓Degree is used to describe individual nodes. ✓To get an idea of the degree for all the nodes in the network, degree  distributionis used.  ✓This shows how many nodes have each possible degree. •Steps: oCalculate the degree for each node in the network.  oCount how many nodes have each degree.",
+      "content_length": 1152,
+      "content_tokens": 288
+    },
+    {
+      "title": "Unit-1-Introduction to Social Web.pdf-9",
+      "content": "This is totaled for each degree, including  those for which there are no nodes with that count.  oThe most common way to show a degree distribution is in a bar graph. The x-axis  has the degrees in ascending order, and the Y-axis indicates how many nodes have a  given-degree    ThedegreedistributionP(k)ofanetworkisthendefinedtobethefractionofnodesin thenetworkwithdegreek.Thusiftherearennodesintotalinanetworkandn k ofthemhave degreek, For directed networks we have both in-and out-degree distributions  ➢Density ✓Density refers to the \"connections\" between participants.  ✓Density describes how connected a network is.  ✓More formally, it is a statistic comparing the number of edges that exist in a  network to the number of edges that could possibly exist. ✓Density is defined as the number of connections a participant has, divided by  the total possible connections a participant could have.  ✓For example, if there are 20 people participating, each person could  potentially connect to 19 other people.",
+      "content_length": 1010,
+      "content_tokens": 242
+    },
+    {
+      "title": "Unit-1-Introduction to Social Web.pdf-10",
+      "content": "✓Formula  to calculate density: number of edges  ÷number of possible edge    •For Directed networks, the number of possible edges in a graph with n  nodes is:       PC=   n ×(n-1) •For undirected networks    PC=   [  n ×(n-1)]  /2 •Density is always between 0 and 1, where 0 is the lowest possible density  and 1 is the highest.  ➢Density in egocentric networks ✓Densityismorecommonlyusedtocomparesubnetworksespeciallyegocentric networks. ✓Computingthedensityofeachnode’segocentricnetworkgivesusawaytocompare nodes. ✓Somewillhavedenseegocentricnetworks,whichmeansalotoftheirfriendsknow oneanother.Otherswillhavesparseegocentricnetworks,andwheretheir connectionsoftendonotknowoneanother. ✓Thedensityofanegocentricnetworkissometimesreferredtoasthelocalclustering coefficient ✓Tocomputethedensityofanegocentricnetwork,1.5-diameternetworkisused ✓Whichconsidersthenode’sconnectionsandalltheconnectionsbetweenthose nodes.",
+      "content_length": 915,
+      "content_tokens": 283
+    },
+    {
+      "title": "Unit-1-Introduction to Social Web.pdf-11",
+      "content": "✓Forthiscalculation,theego-nodewillbeexcludedfromitsegocentricnetwork becausethedensityofinterestisthatoftheconnectionsbetweenthenode’sfriends  •Find density of egocentric node  ➢Connectivity ✓Connectivity, also known as cohesion, measures how the edges  in the  network are distributed.  ✓It is a count of the minimum number of nodesthat would have to be  removed before the graph becomes disconnected; that is, there is no longer a  path from each node to every other node.  ➢Centralization ✓Centralityisanimportantwaytounderstandtheroleofanodeinthe networkandtocomparenodes. ✓Centralizationusesthedistributionofacentralitymeasuretounderstandthe networkasawhole. ✓AnyoneofthecentralitymeasuresmustbeusedtodecideCentralization ✓Ifonenodehasextremelyhighcentralitywhilemostothernodeshavelow centrality,thecentralizationofthegraphishigh. ✓Ifcentralityismoreevenlydistributed,thenthecentralizationofthenetwork islow. ✓Centralizationmeasurestheextenttowhichthetiesofagivennetworkare concentratedonasingleactororgroupofactors.",
+      "content_length": 1022,
+      "content_tokens": 283
+    },
+    {
+      "title": "Unit-1-Introduction to Social Web.pdf-12",
+      "content": "✓Centralizationiscomputedbylookingatthesumofthedifferencesin centralitybetweenthemostcentralnodeandeveryothernodeinthe network,anddividingthisbythemaximumpossibledifferenceincentrality thatcouldexistinthegraph.  •Let C(n) be the centrality of node n, (using whatever centrality measure) •Say n is the most central node. •Find the difference in centrality between n and every other node in the network,  and add those up. •If there are N nodes in the network, the formula for this is: •Divide this by the sum of the maximum possible differences between n and every  other node. [Maximum possible centrality will change depending on which  centrality measure we are using]  •Denoted as •Centralization=",
+      "content_length": 700,
+      "content_tokens": 175
+    }
+  ]
+]
